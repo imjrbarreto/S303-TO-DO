@@ -43,5 +43,14 @@
         "owner": "abc",
         "startDate": "2026-07-24 09:07:20",
         "endDate": null
+    },
+    {
+        "id": "6a631bbbccfc2",
+        "name": "bb",
+        "description": "",
+        "status": "pendiente",
+        "owner": "bb",
+        "startDate": "2026-07-24 10:07:59",
+        "endDate": null
     }
 ]
