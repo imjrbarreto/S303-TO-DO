@@ -1,4 +1,4 @@
- [
+[
     {
         "id": 1,
         "name": "Tarea 1 ",
@@ -34,5 +34,14 @@
         "owner": "Jaime",
         "startDate": "2026-07-10",
         "endDate": null
+    },
+    {
+        "id": "6a632e8655f41",
+        "name": "Tarea Test 1",
+        "description": "",
+        "status": "pendiente",
+        "owner": "User Test",
+        "startDate": "2026-07-24 11:07:10",
+        "endDate": null
     }
- ]
+]

@@ -12,5 +12,6 @@
 $routes = array(
 	'/test' => 'test#index',
 	'/' => 'todo#index',
-	'/one-task' => 'todo#one-task'
+	'/create' => 'todo#create',
+	'/add' => 'todo#add'
 );
