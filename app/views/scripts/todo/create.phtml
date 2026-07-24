@@ -1,0 +1,33 @@
+<div>
+  <div class="flex justify-center mt-15">
+    <div class="bg-gray-100 p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
+      <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex-col items-center justify-between h-full">
+          <h1 class="mb-5"> CREATE A NEW TASK </h1>
+          <area class="flex justify-center">
+          <form class="flex flex-col justify-center" action="/add" method="POST"> <!--*********************** FORMULARIO ***********************-->
+            <div class="flex flex-col">
+              <label for="name">New Task</label>
+              <input class="mb-5 rounded-lg border border-gray-200" type="text" name="name" id="name">
+            </div>
+            <div class="flex flex-col">
+              <label for="description">Description of your task</label>
+              <textarea class="box-content mb-5 rounded-lg border border-gray-200" name="textarea" rows="5" cols="30"></textarea>
+              <!-- <input class="box-content size-50 mb-5 rounded-lg border border-gray-200" type="text" name="description" id="description"> -->
+            </div>
+            <div class="flex flex-col">
+              <label for="owner">Your name</label>
+              <input class="mb-5 rounded-lg border border-gray-200" type="text" name="owner" id="owner">
+            </div>
+            <div class="md:flex space-x-4 flex-row justify-center">
+              <button type="submit" class="text-gray-300 bg-gray-700 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">create</button> <!--falta php para llamar accion de crear-->
+              <a href="/" class="text-gray-300 bg-gray-700 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">cancel</a>
+            </div>
+          </form>
+          </area>
+
+
+
+        </div>
+      </div>
+    </div>
