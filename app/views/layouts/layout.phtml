@@ -4,8 +4,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+	<nav class="bg-gray-900 text-white shadow-md">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16">
+				<div class="flex items-center space-x-4">
+					<a href="/" class="text-xl font-bold tracking-tight">To Do App</a>
+
+				</div>
+			</div>
+		</div>
+	</nav>
 	<?php echo $this->content(); ?>
 </body>
 </html>

@@ -16,9 +16,11 @@ class JsonStorage implements StorageInterface
     //carga el fichero json de un filepath y lo decodifica en un array de datos(json)
         $dataJson = file_get_contents($this->jsonPath);
         $data =json_decode($dataJson, true);    
+
+        return $data;
     }
 
-    #[Override]
+    //#[Override]
     public function write(array $data): void
     {
     //codifica el array en el json y luego se guarda este json en el path
