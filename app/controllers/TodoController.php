@@ -14,6 +14,23 @@ class TodoController extends Controller
 
     public function createAction() {}
 
+    public function addAction()
+    {
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+            
+            {
+                $name = htmlspecialchars($_POST["name"]);
+                $description = htmlspecialchars($_POST["description"]);
+                $owner = htmlspecialchars($_POST["owner"]);
+            }
+
+        $this->todoModel->addTask($name,$description,$owner);
+
+        header('Location: /');
+        exit();
+        
+    }
+
 
 
 
