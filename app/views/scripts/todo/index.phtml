@@ -7,13 +7,16 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <?php foreach ($this->tasks as $task): ?> <!-- aquí se recoge el array que viene del controlador-->
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
+            <a href="/one-task"> 
+            <div  class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
                 <p><?= "$task[name]" ?> </p>
                 <p class="truncate"><?= "$task[description]" ?> </p>
                 <p><?= "$task[owner]" ?> </p>
                 <p><?= "$task[status]" ?> </p>
                 <p><?= "Created at: $task[startDate]" ?> </p>
+                <p class="hidden"><?=  "Finished: $task[endDate]" ?></p>
             </div>
+            </a>
         <?php endforeach; ?>
         </div>
     </main>
