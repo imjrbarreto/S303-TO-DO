@@ -36,21 +36,12 @@
         "endDate": null
     },
     {
-        "id": "6a63181005e30",
-        "name": "abc",
-        "description": "abc",
-        "status": "pendiente",
-        "owner": "abc",
-        "startDate": "2026-07-24 09:07:20",
-        "endDate": null
-    },
-    {
-        "id": "6a631bbbccfc2",
-        "name": "bb",
+        "id": "6a632e8655f41",
+        "name": "Tarea Test 1",
         "description": "",
         "status": "pendiente",
-        "owner": "bb",
-        "startDate": "2026-07-24 10:07:59",
+        "owner": "User Test",
+        "startDate": "2026-07-24 11:07:10",
         "endDate": null
     }
 ]

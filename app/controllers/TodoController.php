@@ -1,6 +1,6 @@
 <?php
 
-class ToDoController extends Controller
+class TodoController extends Controller
 {
     private ToDoModel $todoModel;
     private JsonStorage $storage;
