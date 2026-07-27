@@ -37,7 +37,7 @@ class TodoController extends Controller
         
     }
 
-    public function showTaskAction(string $id)
+    public function showTaskAction()
     {
         $id = $this->_getParam('id');
         $task = $this->todoModel->showTask($id);
