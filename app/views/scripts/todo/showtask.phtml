@@ -1,8 +1,8 @@
 
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10"> <!-- FALTA CENTRAR EL CONTENIDO -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div  class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium mb-5">
+                <div class="grid grid-cols-1 mb-10 md:grid-cols-1 gap-6">
+                        <div  class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
                                 <p><?= $this->task['name'] ?> </p>
                                 <p class="truncate"><?= $this->task['description'] ?> </p>
                                 <p><?= $this->task['owner'] ?> </p>
@@ -17,7 +17,7 @@
         <div class="flex gap-3">
                 <a href="/edit/<?= $this->task['id'] ?>" class="text-gray-300 bg-gray-700 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">EDIT</a>
                 <a href="/delete/<?= $this->task['id'] ?>" type="submit"class="text-gray-300 bg-gray-700 hover:bg-red-700 hover:text.white px-3 py-2 rounded-md text-sm font-medium">DELETE</a>
-                <a href="/" type="submit" class="text-gray-300 bg-gray-700 hover:bg-gray-100 hover:text-black px-3 py-2 rounded-md text-sm font-medium">CLOSE</a>
+                <a href="/" type="submit" class="text-gray-300 bg-gray-700 hover:bg-gray-300 hover:text-black px-3 py-2 rounded-md text-sm font-medium">CLOSE</a>
   
 
 </main>

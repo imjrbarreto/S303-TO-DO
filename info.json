@@ -27,12 +27,21 @@
         "endDate": null
     },
     {
-        "id": "6a69148cb6354",
-        "name": "task con espacios",
+        "id": "6a691d2fdd054",
+        "name": "Crear ENUM ",
         "description": null,
         "status": "pendiente",
-        "owner": "a\u00f1sdkjf\u00f1lksd",
-        "startDate": "2026-07-28 22:07:56",
+        "owner": "Carolina",
+        "startDate": "2026-07-28 23:07:47",
+        "endDate": null
+    },
+    {
+        "id": "6a6922bede04c",
+        "name": "Description?",
+        "description": null,
+        "status": "pendiente",
+        "owner": "Lolaina",
+        "startDate": "2026-07-28 23:07:30",
         "endDate": null
     }
 ]
