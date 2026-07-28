@@ -31,6 +31,19 @@ class ToDoModel
     {
         return $this->storage->read();
     }
+
+    public function showTask(string $id)
+    {
+        $data = $this->storage->read();
+        foreach ($data as $key => $task)
+            {
+                if ($task['id'] == $id)
+                    {
+                        return $task;
+                    }
+            }
+        return null;
+    }
     
 }
 ?>
