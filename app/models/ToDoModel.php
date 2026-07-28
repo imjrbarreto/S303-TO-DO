@@ -44,6 +44,20 @@ class ToDoModel
             }
         return null;
     }
+
+    public function deleteTask($id)
+    {
+
+        $data = $this->storage->read();
+        foreach ($data as $key => $task) {
+            if ($task['id'] == $id) {
+                unset($data[$key]);
+                break;
+            }
+        }
+        $data = array_values($data);
+        $this->storage->write($data);
+    }
     
 }
 ?>

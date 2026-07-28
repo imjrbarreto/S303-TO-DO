@@ -22,13 +22,9 @@ class TodoController extends Controller
 
     public function addAction()
     {
-        if($_SERVER["REQUEST_METHOD"] == "POST")
-            
-            {
-                $name = htmlspecialchars($_POST["name"]);
-                $description = htmlspecialchars($_POST["description"]);
-                $owner = htmlspecialchars($_POST["owner"]);
-            }
+        $name = $this->_getParam("name");
+        $description = $this->_getParam("description");
+        $owner = $this->_getParam("owner");
 
         $this->todoModel->addTask($name, $description, $owner);
 
@@ -44,6 +40,15 @@ class TodoController extends Controller
         $this->view->task = $task;
     }
 
+    public function deleteTaskAction()
+    {
+
+        $id = $this->_getParam('id');
+        $this->todoModel->deleteTask($id);
+
+        header('Location: /');
+        exit();
+    }
 
 }
 ?>
