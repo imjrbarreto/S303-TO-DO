@@ -25,5 +25,14 @@
         "owner": "Jaime",
         "startDate": "2026-07-10",
         "endDate": null
+    },
+    {
+        "id": "6a69148cb6354",
+        "name": "task con espacios",
+        "description": null,
+        "status": "pendiente",
+        "owner": "a\u00f1sdkjf\u00f1lksd",
+        "startDate": "2026-07-28 22:07:56",
+        "endDate": null
     }
 ]
