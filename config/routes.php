@@ -14,5 +14,6 @@ $routes = array(
 	'/' => 'todo#index',
 	'/create' => 'todo#create',
 	'/add' => 'todo#add',
-	'/task/:id' => 'todo#showTask'
+	'/task/:id' => 'todo#showTask',
+	'/delete/:id' => 'todo#deleteTask',
 );
