@@ -1,14 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Tarea 1 ",
-        "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "pendiente",
-        "owner": "Pedro",
-        "startDate": "2026-07-19",
-        "endDate": null
-    },
-    {
         "id": 2,
         "name": "Tarea 2 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
@@ -33,15 +24,6 @@
         "status": "en proceso",
         "owner": "Jaime",
         "startDate": "2026-07-10",
-        "endDate": null
-    },
-    {
-        "id": "6a632e8655f41",
-        "name": "Tarea Test 1",
-        "description": "",
-        "status": "pendiente",
-        "owner": "User Test",
-        "startDate": "2026-07-24 11:07:10",
         "endDate": null
     }
 ]
