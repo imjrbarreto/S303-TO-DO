@@ -9,7 +9,7 @@ class ToDoModel
         $this->storage = $storage; 
     }
 
-    public function addTask(string $name, string $description, string $owner)
+    public function addTask($name, $description, $owner)
     {
         $data = $this->storage->read();
         $newData = [
@@ -18,7 +18,7 @@ class ToDoModel
             "description" => $description,
             "status" => 'pendiente',
             "owner" => $owner,
-            "startDate" => (new DateTime())->format('Y-m-d H:m:s'),
+            "startDate" => (new DateTime())->format('Y-m-d H:i:s'),
             "endDate" => NULL
         ];
 
