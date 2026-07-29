@@ -3,7 +3,7 @@
         "id": 2,
         "name": "Tarea 2 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "en proceso",
+        "status": "in process",
         "owner": "Joana",
         "startDate": "2026-07-19",
         "endDate": null
@@ -12,7 +12,7 @@
         "id": 3,
         "name": "Tarea 3 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "completada",
+        "status": "complete",
         "owner": "David",
         "startDate": "2026-04-19",
         "endDate": "2026-07-12"
@@ -21,7 +21,7 @@
         "id": 4,
         "name": "Tarea 4 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "en proceso",
+        "status": "in process",
         "owner": "Jaime",
         "startDate": "2026-07-10",
         "endDate": null
@@ -30,7 +30,7 @@
         "id": "6a69b53ed95e6",
         "name": "Nueva tarea",
         "description": "Texto texto a\u00f1djfa\u00f1lskdjfa\u00f1klsd",
-        "status": "pendiente",
+        "status": "pending",
         "owner": "Lola",
         "startDate": "2026-07-29 10:07:34",
         "endDate": null
@@ -39,7 +39,7 @@
         "id": "6a69b8aa64302",
         "name": "asdkfjaksdjf",
         "description": "\u00f1askdv\u00f1kldjsvkl\u00f1j",
-        "status": "pendiente",
+        "status": "pending",
         "owner": "vasd",
         "startDate": "2026-07-29 10:07:10",
         "endDate": null
@@ -48,7 +48,7 @@
         "id": "6a69b9a09d165",
         "name": "Nueva tarea",
         "description": "Texto textosdasdasdav a\u00f1djfa\u00f1lskdjfa\u00f1klsd",
-        "status": "pendiente",
+        "status": "pending",
         "owner": "Lola",
         "startDate": "2026-07-29 10:07:16",
         "endDate": null
@@ -57,7 +57,7 @@
         "id": "6a69b9ae2edd7",
         "name": "Nueva tarea",
         "description": "Texto textosdasdasdav a\u00f1djfa\u00f1lskdjfa\u00f1klsd\r\n\r\nasdfasdfasdfasdfs",
-        "status": "pendiente",
+        "status": "pending",
         "owner": "Lola",
         "startDate": "2026-07-29 10:07:30",
         "endDate": null
