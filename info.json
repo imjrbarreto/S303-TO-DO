@@ -27,21 +27,12 @@
         "endDate": null
     },
     {
-        "id": "6a691d2fdd054",
-        "name": "Crear ENUM ",
-        "description": null,
+        "id": "6a69b53ed95e6",
+        "name": "Nueva tarea",
+        "description": "Texto texto a\u00f1djfa\u00f1lskdjfa\u00f1klsd",
         "status": "pendiente",
-        "owner": "Carolina",
-        "startDate": "2026-07-28 23:07:47",
-        "endDate": null
-    },
-    {
-        "id": "6a6922bede04c",
-        "name": "Description?",
-        "description": null,
-        "status": "pendiente",
-        "owner": "Lolaina",
-        "startDate": "2026-07-28 23:07:30",
+        "owner": "Lola",
+        "startDate": "2026-07-29 10:07:34",
         "endDate": null
     }
 ]
