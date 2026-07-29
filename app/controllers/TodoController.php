@@ -50,5 +50,12 @@ class TodoController extends Controller
         exit();
     }
 
+        public function editAction()
+    {
+        $id = $this->_getParam('id');
+        $oldData = $this->todoModel->showTask($id);
+        $this->view->task = $oldData;
+           
+    }
 }
 ?>
