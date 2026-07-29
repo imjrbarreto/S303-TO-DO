@@ -9,7 +9,7 @@ class ToDoModel
         $this->storage = $storage; 
     }
 
-    public function addTask(string $name, string $description, string $owner)
+    public function addTask($name, $description, $owner)
     {
         $data = $this->storage->read();
         $newData = [

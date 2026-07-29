@@ -1,22 +1,23 @@
 
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10"> <!-- FALTA CENTRAR EL CONTENIDO -->
-        <area class="flex justify-center"> <!-- no funciona -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 mb-10 md:grid-cols-1 gap-6">
                         <div  class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
                                 <p><?= $this->task['name'] ?> </p>
                                 <p class="truncate"><?= $this->task['description'] ?> </p>
                                 <p><?= $this->task['owner'] ?> </p>
                                 <p><?= $this->task['status'] ?> </p>
-                                <p><?= "Created at: " . $this->task['startDate'] ?> </p>
-                                <p class="hidden"><?=  "Finished: " .$this->task['endDate'] ?></p>
+                                <p class="text-xs"><?= "Created at: " . $this->task['startDate'] ?> </p>
+                                <?php if($this->task['status'] == 'complete'): ?>
+                                        <p class="text-xs"><?=  "Finished: " .$this->task['endDate'] ?></p>
+                                <?php endif; ?>
                         </div>
                 </div>
-        </area>
-        <div class="mt-15px">
+
+        <div class="flex gap-3">
                 <a href="/edit/<?= $this->task['id'] ?>" class="text-gray-300 bg-gray-700 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">EDIT</a>
                 <a href="/delete/<?= $this->task['id'] ?>" type="submit"class="text-gray-300 bg-gray-700 hover:bg-red-700 hover:text.white px-3 py-2 rounded-md text-sm font-medium">DELETE</a>
-                <a href="/" type="submit" class="text-gray-300 bg-gray-100 hover:bg-gray-100 hover:text-black px-3 py-2 rounded-md text-sm font-medium">CLOSE</a>
+                <a href="/" type="submit" class="text-gray-300 bg-gray-700 hover:bg-gray-300 hover:text-black px-3 py-2 rounded-md text-sm font-medium">CLOSE</a>
   
 
 </main>
