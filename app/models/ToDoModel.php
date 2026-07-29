@@ -72,7 +72,25 @@ class ToDoModel
 
     public function updateTask($id,$name,$description,$owner,$status)
     {
-
+        
+        foreach ($this->data as $key => &$task)
+            {
+                if ($task['id'] == $id) 
+                    {
+                        $task['name'] = $name;
+                        $task['description'] = $description;
+                        $task['owner'] = $owner;
+                        $task['status'] = $status;
+                        if($status == status::COMPLETE->value)
+                            {
+                                $task['endDate'] = (new DateTime())->format('Y-m-d H:m:s');
+                            }
+                        break;  
+                    }
+                    
+            }
+        
+        $this->storage->write($this->data);
     }
     
 }

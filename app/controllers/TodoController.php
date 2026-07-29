@@ -67,11 +67,11 @@ class TodoController extends Controller
         $updateOwner = $this->_getParam("owner");
         $updateStatus = $this->_getParam("status");
 
-        $updateData = $this->todoModel->updateData($id,$updateName,$updateDescription,$updateOwner,$updateStatus);
-        
-        header('Location: /');
-        exit();
+        $this->todoModel->updateTask($id,$updateName,$updateDescription,$updateOwner,$updateStatus);
 
+         header('Location: /');
+        exit();
     }
+
 }
 ?>
