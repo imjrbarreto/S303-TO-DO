@@ -3,15 +3,17 @@
 class ToDoModel 
 {
     private StorageInterface $storage;
+    private array $data;
 
     public function __construct(StorageInterface $storage)
     {
         $this->storage = $storage; 
+        $this->data = $this->storage->read();
     }
 
     public function addTask($name, $description, $owner)
     {
-        $data = $this->storage->read();
+ 
         $newData = [
             "id" => uniqid(),
             "name" => $name, 
@@ -22,9 +24,9 @@ class ToDoModel
             "endDate" => NULL
         ];
 
-        $data[] = $newData;
+        $this->data[] = $newData;
 
-        $this->storage->write($data);
+        $this->storage->write($this->data);
     }
 
     public function getTasks()
@@ -34,8 +36,8 @@ class ToDoModel
 
     public function showTask(string $id)
     {
-        $data = $this->storage->read();
-        foreach ($data as $key => $task)
+  
+        foreach ($this->data as $key => $task)
             {
                 if ($task['id'] == $id)
                     {
@@ -47,17 +49,26 @@ class ToDoModel
 
     public function deleteTask($id)
     {
-
-        $data = $this->storage->read();
-        foreach ($data as $key => $task) {
+        foreach ($this->data as $key => $task) {
             if ($task['id'] == $id) {
-                unset($data[$key]);
+                unset($this->data[$key]);
                 break;
             }
         }
-        $data = array_values($data);
-        $this->storage->write($data);
+        $this->data = array_values($this->data);
+        $this->storage->write($this->data);
     }
+
+         public function editTask($id)
+    {
+        foreach($this->data as $key => $task)
+            {
+                if ($task['id'] == $id)
+                {
+                    return $task;
+                }
+            }
+    } 
     
 }
 ?>
