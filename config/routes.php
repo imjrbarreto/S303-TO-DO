@@ -16,4 +16,6 @@ $routes = array(
 	'/add' => 'todo#add',
 	'/task/:id' => 'todo#showTask',
 	'/delete/:id' => 'todo#deleteTask',
+	'/edit/:id' => 'todo#edit',
+	'/update/:id' => 'todo#update'
 );

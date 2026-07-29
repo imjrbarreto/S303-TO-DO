@@ -18,7 +18,7 @@ class ToDoModel
             "id" => uniqid(),
             "name" => $name, 
             "description" => $description,
-            "status" => 'pendiente',
+            "status" => status::PENDING,
             "owner" => $owner,
             "startDate" => (new DateTime())->format('Y-m-d H:m:s'),
             "endDate" => NULL
@@ -69,6 +69,11 @@ class ToDoModel
                 }
             }
     } 
+
+    public function updateTask($id,$name,$description,$owner,$status)
+    {
+
+    }
     
 }
 ?>

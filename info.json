@@ -43,5 +43,32 @@
         "owner": "vasd",
         "startDate": "2026-07-29 10:07:10",
         "endDate": null
+    },
+    {
+        "id": "6a69b9a09d165",
+        "name": "Nueva tarea",
+        "description": "Texto textosdasdasdav a\u00f1djfa\u00f1lskdjfa\u00f1klsd",
+        "status": "pendiente",
+        "owner": "Lola",
+        "startDate": "2026-07-29 10:07:16",
+        "endDate": null
+    },
+    {
+        "id": "6a69b9ae2edd7",
+        "name": "Nueva tarea",
+        "description": "Texto textosdasdasdav a\u00f1djfa\u00f1lskdjfa\u00f1klsd\r\n\r\nasdfasdfasdfasdfs",
+        "status": "pendiente",
+        "owner": "Lola",
+        "startDate": "2026-07-29 10:07:30",
+        "endDate": null
+    },
+    {
+        "id": "6a69bbe2c9f37",
+        "name": "Enum test",
+        "description": "TEste\u00f1asdka\u00f1lsdj sdfasd\r\nasdfasd",
+        "status": "pending",
+        "owner": "asdf",
+        "startDate": "2026-07-29 10:07:54",
+        "endDate": null
     }
 ]

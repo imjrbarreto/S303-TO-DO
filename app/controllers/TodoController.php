@@ -57,5 +57,21 @@ class TodoController extends Controller
         $this->view->task = $oldData;
            
     }
+
+    public function updateAction()
+    {
+        $id = $this->_getParam('id');
+
+        $updateName = $this->_getParam("name");
+        $updateDescription = $this->_getParam("description");
+        $updateOwner = $this->_getParam("owner");
+        $updateStatus = $this->_getParam("status");
+
+        $updateData = $this->todoModel->updateData($id,$updateName,$updateDescription,$updateOwner,$updateStatus);
+        
+        header('Location: /');
+        exit();
+
+    }
 }
 ?>
