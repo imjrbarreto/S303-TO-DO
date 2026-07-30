@@ -1,3 +1,5 @@
+Readme 
+
 # ToDo App
 
 A simple ToDo list app built with PHP (MVC pattern) and Tailwind CSS.
@@ -30,3 +32,4 @@ Tasks are stored in a JSON file, no database is used.
 1. git clone https://github.com/imjrbarreto/S303-TO-DO.git
 2. Start PHP (e.g. `php -S localhost:8000 web/index.php`).
 3. Open the app in your browser.
+
