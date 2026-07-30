@@ -3,13 +3,13 @@
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10"> <!-- FALTA CENTRAR EL CONTENIDO -->
                 <div class="grid grid-cols-1 mb-10 md:grid-cols-1 gap-6">
                         <div  class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
-                                <p><?= $this->task['name'] ?> </p>
-                                <p class="truncate"><?= $this->task['description'] ?> </p>
-                                <p><?= $this->task['owner'] ?> </p>
-                                <p><?= $this->task['status'] ?> </p>
-                                <p class="text-xs"><?= "Created at: " . $this->task['startDate'] ?> </p>
+                                <p><?= htmlspecialchars($this->task['name']) ?> </p>
+                                <p class="truncate"><?= htmlspecialchars($this->task['description']) ?> </p>
+                                <p><?= htmlspecialchars($this->task['owner']) ?> </p>
+                                <p><?= htmlspecialchars($this->task['status']) ?> </p>
+                                <p class="text-xs"><?= "Created at: " . htmlspecialchars($this->task['startDate']) ?> </p>
                                 <?php if($this->task['status'] == 'complete'): ?>
-                                        <p class="text-xs"><?=  "Finished: " .$this->task['endDate'] ?></p>
+                                        <p class="text-xs"><?=  "Finished: " .htmlspecialchars($this->task['endDate']) ?></p>
                                 <?php endif; ?>
                         </div>
                 </div>

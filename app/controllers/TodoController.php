@@ -22,9 +22,9 @@ class TodoController extends Controller
 
     public function addAction()
     {
-        $name = $this->_getParam("name");
-        $description = $this->_getParam("description");
-        $owner = $this->_getParam("owner");
+        $name = $this->_getParam(htmlspecialchars("name"));
+        $description = $this->_getParam(htmlspecialchars("description"));
+        $owner = $this->_getParam(htmlspecialchars("owner"));
 
         $this->todoModel->addTask($name, $description, $owner);
 

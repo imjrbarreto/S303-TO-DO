@@ -10,9 +10,9 @@
         <?php $status= status::from($task['status']);?>
             <a href="/task/<?= $task['id'] ?>">
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
-                <p class="truncate font-bold text-lg"><?= "$task[name]" ?> </p>
-                <p class="truncate italic"><?= "$task[description]" ?> </p>
-                <p><?= "$task[owner]" ?> </p>
+                <p class="truncate font-bold text-lg"><?=htmlspecialchars("$task[name]") ?> </p>
+                <p class="truncate italic"><?=htmlspecialchars("$task[description]") ?> </p>
+                <p><?= htmlspecialchars("$task[owner]") ?> </p>
                 <p class="text-sm font-bold <?= $status->setColor()?>"><?= "$task[status]" ?> </p>
             </div>
         <?php endforeach; ?>

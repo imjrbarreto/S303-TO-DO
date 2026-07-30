@@ -79,5 +79,32 @@
         "owner": "miri",
         "startDate": "2026-07-29 13:07:38",
         "endDate": "2026-07-29 13:07:07"
+    },
+    {
+        "id": "6a6b3120ab0c2",
+        "name": "prueba htmlspec",
+        "description": "prueba usando htmlspecialchars(",
+        "status": "pending",
+        "owner": "htmlspecialChars",
+        "startDate": "2026-07-30 13:07:24",
+        "endDate": null
+    },
+    {
+        "id": "6a6b32b07b254",
+        "name": "qefqwe",
+        "description": "<script>alert('hola')<\/script>",
+        "status": "pending",
+        "owner": "qsfqe",
+        "startDate": "2026-07-30 13:07:04",
+        "endDate": null
+    },
+    {
+        "id": "6a6b335956c3d",
+        "name": "sdfasdf",
+        "description": "<script>alert('hola')<\/script>",
+        "status": "pending",
+        "owner": "sdf",
+        "startDate": "2026-07-30 13:07:53",
+        "endDate": null
     }
 ]
