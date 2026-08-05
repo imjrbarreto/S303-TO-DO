@@ -73,11 +73,11 @@ class ToDoModel
 
     public function updateTask($id,$name,$description,$owner,$status)
     {
-        //Refactorizar la validación
-/*         if($status !== status::PENDING->value || $status != status::INPROCESS->value || $status != status::COMPLETE->value )
+        $validStatus = array_column(status::cases(), 'value');
+        if(!in_array($status, $validStatus))
             {
                 $status = status::PENDING->value;
-            } */
+            }
 
         foreach ($this->data as $key => &$task)
             {

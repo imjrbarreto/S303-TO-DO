@@ -1,6 +1,6 @@
 <?php
 
-class Validator
+class ValidatorController
 {
     public function validateData ($name,$description,$owner)
     {
@@ -18,6 +18,10 @@ class Validator
             {
                 $errors['name'] = "Title cannot be only numbers";
             }
+        elseif(!preg_match('/^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s]+$/', $name))
+            {
+                $errors['name'] = "Name cannot have special chars";
+            }
         
         $description = trim($description);
         if (empty($description))
@@ -32,6 +36,10 @@ class Validator
             {
                 $errors['description'] = "Description cannot be only numbers";
             }
+        elseif(!preg_match('/^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s\.\,\;\:\-\!\?\¿\¡\(\)]+$/', $description))
+            {
+                $errors['description'] = "Description cannot have special chars";
+            }
 
         $owner = trim($owner);
         if (empty($owner))
@@ -45,6 +53,10 @@ class Validator
         elseif (preg_match('/^[0-9]+$/', $owner))
             {
                 $errors['owner'] = "Owner cannot be only numbers";
+            }
+        elseif(!preg_match('/^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s]+$/', $owner))
+            {
+                $errors['owner'] = "Owner cannot have special chars";
             }
         
         return $errors;

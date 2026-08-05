@@ -1,18 +1,17 @@
 <?php
 
-require 'app/controllers/ValidatorController.php';
 
 class TodoController extends Controller
 {
     private ToDoModel $todoModel;
     private JsonStorage $storage;
-    private Validator $validator;
+    private ValidatorController $validator;
     
     public function __construct()
     {
         $this->storage = new JsonStorage(ROOT_PATH . '/info.json');
         $this->todoModel = new ToDoModel($this->storage);
-        $this->validator = new Validator();
+        $this->validator = new ValidatorController();
     }
 
     public function indexAction()
@@ -77,15 +76,34 @@ class TodoController extends Controller
     {
         $id = $this->_getParam('id');
 
-        $updateName = $this->_getParam("name");
-        $updateDescription = $this->_getParam("description");
-        $updateOwner = $this->_getParam("owner");
+        $updateName = htmlspecialchars($this->_getParam("name"));
+        $updateDescription = htmlspecialchars($this->_getParam("description"));
+        $updateOwner = htmlspecialchars($this->_getParam("owner"));
         $updateStatus = $this->_getParam("status");
 
-        $this->todoModel->updateTask($id,$updateName,$updateDescription,$updateOwner,$updateStatus);
+        $errors = $this->validator->validateData($updateName,$updateDescription,$updateOwner);
+        
+        if(empty($errors))
+            {
+                $this->todoModel->updateTask($id,$updateName,$updateDescription,$updateOwner,$updateStatus);
+                header('Location: /');
+                exit();
+            }
+        else 
+            {           
+                $this->view->errors = $errors;
 
-         header('Location: /');
-        exit();
+                $this->view->task = [
+                    'id' => $id,
+                    'name' => $updateName,
+                    'description' => $updateDescription,
+                    'owner' => $updateOwner,
+                    'status' => $updateStatus
+                ];
+                $this->view->render('todo/edit.phtml');
+                exit();
+            }
+
     }
 
 }

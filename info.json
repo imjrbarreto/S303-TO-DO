@@ -15,7 +15,7 @@
         "status": "complete",
         "owner": "David",
         "startDate": "2026-04-19",
-        "endDate": "2026-07-12"
+        "endDate": "2026-08-05 20:08:19"
     },
     {
         "id": 4,
@@ -93,18 +93,27 @@
         "id": "6a73677aa5b4e",
         "name": "Errores",
         "description": "Buscando la manera de representar errores",
-        "status": "pending",
+        "status": "in process",
         "owner": "Don Error",
         "startDate": "2026-08-05 18:08:26",
         "endDate": null
     },
     {
         "id": "6a73686f7c322",
-        "name": "ASFASDEF",
-        "description": "afFSDA\u00d1KDFJA\u00d1LSFJ",
+        "name": "Error working",
+        "description": "fq\u00f1lwejf\u00f1iqweh\u00f1fkwe",
         "status": "pending",
-        "owner": "ASD\u00d1FKJASL",
+        "owner": "q34qwef",
         "startDate": "2026-08-05 18:08:31",
         "endDate": null
+    },
+    {
+        "id": "6a738281d8a2c",
+        "name": "New Final Task",
+        "description": "Ultimate test",
+        "status": "complete",
+        "owner": "The last of Us",
+        "startDate": "2026-08-05 20:08:45",
+        "endDate": "2026-08-05 20:08:44"
     }
 ]
