@@ -1,15 +1,18 @@
 <?php
 
+require 'app/controllers/ValidatorController.php';
+
 class TodoController extends Controller
 {
     private ToDoModel $todoModel;
     private JsonStorage $storage;
+    private Validator $validator;
     
     public function __construct()
     {
-
         $this->storage = new JsonStorage(ROOT_PATH . '/info.json');
         $this->todoModel = new ToDoModel($this->storage);
+        $this->validator = new Validator();
     }
 
     public function indexAction()
@@ -22,15 +25,27 @@ class TodoController extends Controller
 
     public function addAction()
     {
-        $name = $this->_getParam(htmlspecialchars("name"));
-        $description = $this->_getParam(htmlspecialchars("description"));
-        $owner = $this->_getParam(htmlspecialchars("owner"));
+        $name = htmlspecialchars($this->_getParam("name"));
+        $description = htmlspecialchars($this->_getParam("description"));
+        $owner = htmlspecialchars($this->_getParam("owner"));
 
-        $this->todoModel->addTask($name, $description, $owner);
+        $errors = $this->validator->validateData($name,$description,$owner);
+        if(empty($errors))
+            {
+                $this->todoModel->addTask($name, $description, $owner);
+                header('Location: /');
+                exit(); 
+            }
+        else 
+            {           
+                $this->view->errors = $errors;
+                $this->view->name = $name;
+                $this->view->description = $description;
+                $this->view->owner = $owner;
+                $this->view->render('todo/create.phtml');
+                exit();
+            }
 
-        header('Location: /');
-        exit();
-        
     }
 
     public function showTaskAction()
@@ -50,7 +65,7 @@ class TodoController extends Controller
         exit();
     }
 
-        public function editAction()
+    public function editAction()
     {
         $id = $this->_getParam('id');
         $oldData = $this->todoModel->showTask($id);

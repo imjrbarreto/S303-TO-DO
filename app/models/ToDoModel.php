@@ -13,7 +13,7 @@ class ToDoModel
 
     public function addTask($name, $description, $owner)
     {
- 
+
         $newData = [
             "id" => uniqid(),
             "name" => $name, 
@@ -24,6 +24,7 @@ class ToDoModel
             "endDate" => NULL
         ];
 
+    
         $this->data[] = $newData;
 
         $this->storage->write($this->data);
@@ -72,7 +73,12 @@ class ToDoModel
 
     public function updateTask($id,$name,$description,$owner,$status)
     {
-        
+        //Refactorizar la validación
+/*         if($status !== status::PENDING->value || $status != status::INPROCESS->value || $status != status::COMPLETE->value )
+            {
+                $status = status::PENDING->value;
+            } */
+
         foreach ($this->data as $key => &$task)
             {
                 if ($task['id'] == $id) 
@@ -92,6 +98,7 @@ class ToDoModel
         
         $this->storage->write($this->data);
     }
+
     
 }
 ?>

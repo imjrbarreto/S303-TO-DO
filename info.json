@@ -90,21 +90,21 @@
         "endDate": null
     },
     {
-        "id": "6a6b32b07b254",
-        "name": "qefqwe",
-        "description": "<script>alert('hola')<\/script>",
+        "id": "6a73677aa5b4e",
+        "name": "Errores",
+        "description": "Buscando la manera de representar errores",
         "status": "pending",
-        "owner": "qsfqe",
-        "startDate": "2026-07-30 13:07:04",
+        "owner": "Don Error",
+        "startDate": "2026-08-05 18:08:26",
         "endDate": null
     },
     {
-        "id": "6a6b335956c3d",
-        "name": "sdfasdf",
-        "description": "<script>alert('hola')<\/script>",
+        "id": "6a73686f7c322",
+        "name": "ASFASDEF",
+        "description": "afFSDA\u00d1KDFJA\u00d1LSFJ",
         "status": "pending",
-        "owner": "sdf",
-        "startDate": "2026-07-30 13:07:53",
+        "owner": "ASD\u00d1FKJASL",
+        "startDate": "2026-08-05 18:08:31",
         "endDate": null
     }
 ]
