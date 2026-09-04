@@ -3,31 +3,42 @@
     <div class="bg-gray-100 p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
       <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex-col items-center justify-between h-full">
-          <h1 class="mb-5 italic"> CREATE A NEW TASK </h1>
+          
+          <h1 class="font-bold italic max-w-sm mb-5"> CREATE A NEW TASK </h1>
+          
           <area class="flex justify-center">
-          <form class="flex flex-col justify-center" action="/add" method="POST"> <!--*********************** FORMULARIO ***********************-->
+          <form class="flex flex-col justify-center" action="/add" method="POST"> 
+            
             <div class="flex flex-col">
               <label for="name">Title Task</label>
-              <input class="mb-5 rounded-lg border border-gray-200" type="text" maxlength="15" name="name" id="name" required>
+              <input class="p-1 mb-2 rounded-lg border border-gray-200" type="text" maxlength="15" name="name" id="name" value="<?= isset($this->name) ? $this->name: '' ?>" required>
+              <?php if(isset($this->errors['name'])) : ?>
+              <p class="text-xs text-red-500 mb-5"><?= $this->errors['name'] ?></p>
+              <?php endif ?>
             </div>
+            
             <div class="flex flex-col">
               <label for="description">Description of your task</label>
-              <textarea class="box-content mb-5 rounded-lg border border-gray-200" name="description" rows="5" cols="30" required></textarea>
-              <!-- <input class="box-content size-50 mb-5 rounded-lg border border-gray-200" type="text" name="description" id="description"> -->
+              <textarea class="box-content p-1 mb-2 rounded-lg border border-gray-200" name="description" rows="5" cols="30" required><?= isset($this->description) ? $this->description : '' ?></textarea>
+              <?php if(isset($this->errors['description'])) : ?>
+              <p class="text-xs text-red-500 mb-5"><?= $this->errors['description'] ?></p>
+              <?php endif ?> 
             </div>
+
             <div class="flex flex-col">
               <label for="owner">Your name</label>
-              <input class="mb-5 rounded-lg border border-gray-200" type="text" name="owner" id="owner" required>
+              <input class="p-1 mb-2 rounded-lg border border-gray-200" type="text" name="owner" id="owner" value="<?= isset($this->owner) ? $this->owner : '' ?>" required>
+                <?php if(isset($this->errors['owner'])) : ?>
+                <p class="text-xs text-red-500 mb-5"><?= $this->errors['owner'] ?></p>
+                <?php endif ?>
             </div>
             <div class="md:flex space-x-4 flex-row justify-center">
-              <button type="submit" class="text-gray-300 bg-gray-700 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">create</button> <!--falta php para llamar accion de crear-->
+              <button type="submit" class="text-gray-300 bg-gray-700 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">create</button>
               <a href="/" class="text-gray-300 bg-gray-700 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">cancel</a>
             </div>
           </form>
+
           </area>
-
-
-
         </div>
       </div>
     </div>

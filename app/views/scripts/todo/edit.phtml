@@ -1,0 +1,50 @@
+<div>
+  <div class="flex justify-center mt-15">
+    <div class="bg-gray-100 p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
+      <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex-col items-center justify-between h-full">
+          <h1 class="font-bold italic mb-5"> EDIT TASK </h1>
+          <area class="flex justify-center">
+          
+          <form class="flex flex-col justify-center" action="/update/<?= $this->task['id'] ?>" method="POST">
+            <div class="flex flex-col">
+              <label for="name">Title Task</label>
+              <input value="<?= isset($this->task['name']) ? htmlspecialchars($this->task['name']) : '' ?>" class="p-1 mb-5 rounded-lg border border-gray-200" type="text" name="name" id="name">
+                <?php if(isset($this->errors['name'])) : ?>
+                <p class="text-xs text-red-500 mb-5"><?= $this->errors['name'] ?></p>
+                <?php endif ?>
+            </div>
+            <div class="flex flex-col">
+              <label for="description">Description of your task</label>
+              <textarea id="idDescription" class="p-1 box-content mb-5 rounded-lg border border-gray-200" name="description" rows="5" cols="30"><?= isset($this->task['description']) ? htmlspecialchars($this->task['description']) : '' ?></textarea>
+                  <?php if(isset($this->errors['description'])) : ?>
+                  <p class="text-xs text-red-500 mb-5"><?= $this->errors['description'] ?></p>
+                  <?php endif ?> 
+            </div>
+            <div class="flex flex-col">
+              <label for="owner">Your name</label>
+              <input value="<?= isset($this->task['owner']) ? htmlspecialchars($this->task['owner']) : '' ?>"  class="p-1 mb-5 rounded-lg border border-gray-200" type="text" name="owner" id="owner">
+                  <?php if(isset($this->errors['owner'])) : ?>
+                  <p class="text-xs text-red-500 mb-5"><?= $this->errors['owner'] ?></p>
+                  <?php endif ?>
+            </div>
+
+             <label for="status">Status</label>
+             <select class="p-1 border border-gray-200 rounded-md mb-5" name="status">
+                <option value="pending">pending</option>
+                <option value="in process">in process</option>
+                <option value="complete">complete</option>
+              </select>
+
+            <div class="md:flex space-x-4 flex-row justify-center">
+              <button type="submit" class="text-gray-300 bg-gray-700 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">update</button>
+              <a href="/" class="text-gray-300 bg-gray-700 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">cancel</a>
+            </div>
+          </form>
+          </area>
+
+
+
+        </div>
+      </div>
+    </div>

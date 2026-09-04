@@ -1,19 +1,19 @@
 <!-- CODIGO HTML CON TAILWIND para dar formato a nuestra vista index -->
 
-<div class="md:flex justify-center mt-15 space-x-4">
-    <a href="/create" class="flex justify-center text-gray-300 bg-gray-700 hover:bg-amber-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Create new Task</a>
+<div class="flex justify-center mt-15">
+    <a href="/create" class="text-gray-300 bg-gray-700 hover:bg-amber-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Create new Task</a>
 </div>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <?php foreach ($this->tasks as $task): ?> <!-- aquí se recoge el array que viene del controlador-->
+        <?php foreach ($this->tasks as $task): ?>
+        <?php $status= status::from($task['status']);?>
             <a href="/task/<?= $task['id'] ?>">
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center font-medium">
-                <p class="truncate"><?= "$task[name]" ?> </p>
-                <p class="truncate"><?= "$task[description]" ?> </p>
-                <p><?= "$task[owner]" ?> </p>
-                <p><?= "$task[status]" ?> </p>
-               <!--  <p class="text-xs"><?= "Created at: $task[startDate]" ?> </p> -->
+                <p class="truncate font-bold text-lg"><?=htmlspecialchars("$task[name]") ?> </p>
+                <p class="truncate italic"><?=htmlspecialchars("$task[description]") ?> </p>
+                <p><?= htmlspecialchars("$task[owner]") ?> </p>
+                <p class="text-sm font-bold <?= $status->setColor()?>"><?= "$task[status]" ?> </p>
             </div>
         <?php endforeach; ?>
         </div>

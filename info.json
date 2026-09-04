@@ -3,7 +3,7 @@
         "id": 2,
         "name": "Tarea 2 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "en proceso",
+        "status": "in process",
         "owner": "Joana",
         "startDate": "2026-07-19",
         "endDate": null
@@ -12,36 +12,108 @@
         "id": 3,
         "name": "Tarea 3 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "completada",
+        "status": "complete",
         "owner": "David",
         "startDate": "2026-04-19",
-        "endDate": "2026-07-12"
+        "endDate": "2026-08-05 20:08:19"
     },
     {
         "id": 4,
         "name": "Tarea 4 ",
         "description": " Loreimpus\u00f1ajsd\u00f1fijas\u00f1dlifjas\u00f1dl",
-        "status": "en proceso",
+        "status": "in process",
         "owner": "Jaime",
         "startDate": "2026-07-10",
         "endDate": null
     },
     {
-        "id": "6a691d2fdd054",
-        "name": "Crear ENUM ",
-        "description": null,
-        "status": "pendiente",
-        "owner": "Carolina",
-        "startDate": "2026-07-28 23:07:47",
+        "id": "6a69b53ed95e6",
+        "name": "Nueva tarea",
+        "description": "Texto texto a\u00f1djfa\u00f1lskdjfa\u00f1klsd",
+        "status": "pending",
+        "owner": "Lola",
+        "startDate": "2026-07-29 10:07:34",
         "endDate": null
     },
     {
-        "id": "6a6922bede04c",
-        "name": "Description?",
-        "description": null,
-        "status": "pendiente",
-        "owner": "Lolaina",
-        "startDate": "2026-07-28 23:07:30",
+        "id": "6a69b8aa64302",
+        "name": "asdkfjaksdjf",
+        "description": "Isma cont\u00e1ndonos sus dramas",
+        "status": "complete",
+        "owner": "Hola Isma",
+        "startDate": "2026-07-29 10:07:10",
+        "endDate": "2026-07-29 13:07:26"
+    },
+    {
+        "id": "6a69b9a09d165",
+        "name": "Nueva tarea",
+        "description": "Texto textosdasdasdav a\u00f1djfa\u00f1lskdjfa\u00f1klsd",
+        "status": "pending",
+        "owner": "Lola",
+        "startDate": "2026-07-29 10:07:16",
         "endDate": null
+    },
+    {
+        "id": "6a69b9ae2edd7",
+        "name": "Nueva tarea",
+        "description": "Texto textosdasdasdav a\u00f1djfa\u00f1lskdjfa\u00f1klsd\r\n\r\nasdfasdfasdfasdfs",
+        "status": "pending",
+        "owner": "Lola",
+        "startDate": "2026-07-29 10:07:30",
+        "endDate": null
+    },
+    {
+        "id": "6a69bbe2c9f37",
+        "name": "Enum test",
+        "description": "TEste\u00f1asdka\u00f1lsdj sdfasd\r\nasdfasd",
+        "status": "pending",
+        "owner": "asdf",
+        "startDate": "2026-07-29 10:07:54",
+        "endDate": "2026-07-29 12:07:16"
+    },
+    {
+        "id": "6a69e63ebb750",
+        "name": "pruwba",
+        "description": "fdgfhghgj",
+        "status": "complete",
+        "owner": "miri",
+        "startDate": "2026-07-29 13:07:38",
+        "endDate": "2026-07-29 13:07:07"
+    },
+    {
+        "id": "6a6b3120ab0c2",
+        "name": "prueba htmlspec",
+        "description": "prueba usando htmlspecialchars(",
+        "status": "pending",
+        "owner": "htmlspecialChars",
+        "startDate": "2026-07-30 13:07:24",
+        "endDate": null
+    },
+    {
+        "id": "6a73677aa5b4e",
+        "name": "Errores",
+        "description": "Buscando la manera de representar errores",
+        "status": "in process",
+        "owner": "Don Error",
+        "startDate": "2026-08-05 18:08:26",
+        "endDate": null
+    },
+    {
+        "id": "6a73686f7c322",
+        "name": "Error working",
+        "description": "fq\u00f1lwejf\u00f1iqweh\u00f1fkwe",
+        "status": "pending",
+        "owner": "q34qwef",
+        "startDate": "2026-08-05 18:08:31",
+        "endDate": null
+    },
+    {
+        "id": "6a738281d8a2c",
+        "name": "New Final Task",
+        "description": "Ultimate test",
+        "status": "complete",
+        "owner": "The last of Us",
+        "startDate": "2026-08-05 20:08:45",
+        "endDate": "2026-08-05 20:08:44"
     }
 ]
